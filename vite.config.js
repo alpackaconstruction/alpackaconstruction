@@ -7,7 +7,7 @@ const SITE_URL = 'https://alpackaconstruction.com';
 const PHONE_DISPLAY = '(917) 682-6404';
 const PHONE_E164 = '+19176826404';
 const SERVICE_AREA = 'the Pocono Mountains and northern NJ';
-const HIC_NUMBER = 'PA——';
+const HIC_NUMBER = 'PA215345';
 
 function sitemapPlugin() {
     return {
