@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {{> head}}
+        <link rel="stylesheet" href="src/css/styles.css" />
+    </head>
+    <body>
+        {{> construction-banner}}
+        <div id="top"></div>
+        <!-- HEADER / NAV -->
+        <header class="site-header">
+            <div class="container nav-inner">
+                <a href="#top" class="logo" aria-label="Alpacka Construction LLC home">
+                    {{> logo}}
+                    <h1 class="logo-text">
+                        Alpacka Construction<span class="sr-only"> — Home Contractors in {{serviceArea}}</span>
+                    </h1>
+                </a>
+
+                <button
+                    class="nav-toggle"
+                    id="navToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="siteNav"
+                >
+                    <span></span><span></span><span></span>
+                </button>
+
+                <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#gallery">Our Work</a>
+                    <!-- nav-phone -->
+                    <a href="tel:{{phoneE164}}" class="nav-phone-cta">
+                        <svg
+                            viewBox="0 0 24 24"
+                            width="13"
+                            height="13"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .9h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
+                            />
+                        </svg>
+                        {{phoneDisplay}}
+                    </a>
+                    <!-- <a href="#contact" class="nav-cta">Get a Quote</a> -->
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!-- HERO -->
+            <section class="hero" id="home" aria-labelledby="heroHeading">
+                <div class="hero-bg" aria-hidden="true"></div>
+                <div class="container hero-content">
+                    <div class="hero-text">
+                        <p class="eyebrow">Licensed &amp; Insured · Serving {{serviceArea}}</p>
+                        <h2 id="heroHeading">Your Home.<br />Done&nbsp;Right.</h2>
+                        <p class="hero-sub">
+                            Home remodeling and contracting built on trust, craftsmanship, and a commitment to showing
+                            up — on time and on budget.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="tel:{{phoneE164}}" class="btn btn-accent">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="15"
+                                    height="15"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2.5"
+                                    stroke-linecap="round"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .9h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
+                                    />
+                                </svg>
+                                Call for a Free Estimate
+                            </a>
+                            <a href="#gallery" class="btn btn-ghost">See Our Work</a>
+                        </div>
+                    </div>
+                    <div class="hero-logo" aria-hidden="true">
+                        <img src="images/logo-alpaca.webp" alt="" width="1084" height="1422" />
+                    </div>
+                </div>
+                <a href="#about" class="scroll-hint" aria-label="Scroll to About">
+                    <svg
+                        viewBox="0 0 24 24"
+                        width="22"
+                        height="22"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        aria-hidden="true"
+                    >
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                </a>
+            </section>
+
+            <!-- ABOUT -->
+            <section class="about" id="about" aria-labelledby="aboutHeading">
+                <div class="container about-grid">
+                    <div class="about-text" data-reveal>
+                        <span class="section-label">Our Mission</span>
+                        <h2 id="aboutHeading">Quality work, honest pricing, and a handshake you can count on.</h2>
+                        <p>
+                            Alpacka Construction LLC was built on a simple idea: treat every home like it's your own.
+                            Based in Effort, PA, we're a small team of licensed contractors serving {{serviceArea}} who
+                            believe that clear communication, fair quotes, and clean workmanship are the bare minimum —
+                            not a selling point.
+                        </p>
+                        <p>
+                            Whether it's a full bathroom gut, new flooring throughout the house, or finally finishing
+                            that basement, we show up, communicate every step, and do the job right.
+                        </p>
+                        <ul class="trust-list" aria-label="Key credentials">
+                            <li><span class="check" aria-hidden="true">✓</span> Licensed &amp; Insured</li>
+                            <li><span class="check" aria-hidden="true">✓</span> Free Estimates</li>
+                            <li><span class="check" aria-hidden="true">✓</span> Local &amp; Family Owned</li>
+                            <li><span class="check" aria-hidden="true">✓</span> Clean Jobsite, Always</li>
+                        </ul>
+                    </div>
+                    <div class="stats-grid" aria-label="Company statistics" data-reveal>
+                        <div class="stat-card">
+                            <span class="stat-num">50+</span>
+                            <span class="stat-label">Projects completed</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">2+</span>
+                            <span class="stat-label">Years in business</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">5★</span>
+                            <span class="stat-label">Average review</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">100%</span>
+                            <span class="stat-label">Satisfaction guaranteed</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SERVICES -->
+            <section class="services" id="services" aria-labelledby="servicesHeading">
+                <div class="container">
+                    <div class="section-header" data-reveal>
+                        <h2 id="servicesHeading">Services</h2>
+                    </div>
+                    <div class="services-grid">
+                        <article class="service-card" data-reveal>
+                            <div class="service-icon" aria-hidden="true">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.75"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z" />
+                                    <path d="M14 17h6M17 14v6" />
+                                </svg>
+                            </div>
+                            <h3>Kitchen &amp; Bathroom Remodels</h3>
+                            <ul>
+                                <li>Full bathroom gut &amp; rebuild</li>
+                                <li>Tile, shower &amp; tub surrounds</li>
+                                <li>Cabinets, countertops &amp; sinks</li>
+                                <li>Kitchen layout &amp; fixture updates</li>
+                                <li>Lighting &amp; ventilation</li>
+                            </ul>
+                        </article>
+
+                        <article class="service-card" data-reveal>
+                            <div class="service-icon" aria-hidden="true">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.75"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <rect x="2" y="18" width="20" height="3" rx="1" />
+                                    <path d="M4 18V8l8-4 8 4v10" />
+                                    <path d="M10 18v-5h4v5" />
+                                </svg>
+                            </div>
+                            <h3>Flooring, Trim &amp; Painting</h3>
+                            <ul>
+                                <li>Hardwood, LVP &amp; tile installation</li>
+                                <li>Subfloor repair &amp; leveling</li>
+                                <li>Baseboard &amp; crown molding</li>
+                                <li>Door &amp; window casing</li>
+                                <li>Interior &amp; exterior painting</li>
+                            </ul>
+                        </article>
+
+                        <article class="service-card" data-reveal>
+                            <div class="service-icon" aria-hidden="true">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.75"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                                    <polyline points="9 22 9 12 15 12 15 22" />
+                                </svg>
+                            </div>
+                            <h3>Full Renovations</h3>
+                            <ul>
+                                <li>Basement finishing</li>
+                                <li>Drywall, framing &amp; patching</li>
+                                <li>Whole-home renovations</li>
+                                <li>Room additions</li>
+                                <li>Permit coordination</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- GALLERY -->
+            <section class="gallery-section" id="gallery" aria-labelledby="galleryHeading">
+                <div class="container">
+                    <div class="section-header" data-reveal>
+                        <span class="section-label">Portfolio</span>
+                        <h2 id="galleryHeading">Our Work</h2>
+                        <p class="section-sub">
+                            A sample of recent projects — from bathroom remodels to full home renovations.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gallery-outer" role="region" aria-label="Project gallery" aria-roledescription="carousel">
+                    <div class="gallery-track" id="galleryTrack" tabindex="0">
+                        <figure class="gallery-item" role="group" aria-roledescription="slide">
+                            <div class="gallery-img-wrap">
+                                <img
+                                    src="images/showcase/showcase_6.webp"
+                                    alt="Complete bathroom remodel - new tiling, shower, cabinet, sink, and toilet."
+                                    loading="eager"
+                                    width="800"
+                                    height="600"
+                                />
+                            </div>
+                            <figcaption>Bathroom Remodel</figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" role="group" aria-roledescription="slide">
+                            <div class="gallery-img-wrap">
+                                <img
+                                    src="images/showcase/showcase_11.webp"
+                                    alt="Full kitchen renovation with new cabinets, flooring, countertops, and lighting."
+                                    loading="lazy"
+                                    width="800"
+                                    height="600"
+                                />
+                            </div>
+                            <figcaption>Kitchen Renovation</figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" role="group" aria-roledescription="slide">
+                            <div class="gallery-img-wrap">
+                                <img
+                                    src="images/showcase/showcase_13.webp"
+                                    alt="Full room remodel with new flooring, painting, trim."
+                                    loading="lazy"
+                                    width="800"
+                                    height="600"
+                                />
+                            </div>
+                            <figcaption>Room Remodel</figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" role="group" aria-roledescription="slide">
+                            <div class="gallery-img-wrap">
+                                <img
+                                    src="images/showcase/showcase_3.webp"
+                                    alt="In Action."
+                                    loading="lazy"
+                                    width="800"
+                                    height="600"
+                                />
+                            </div>
+                            <figcaption>In Action</figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" role="group" aria-roledescription="slide">
+                            <div class="gallery-img-wrap">
+                                <img
+                                    src="images/showcase/showcase_17.webp"
+                                    alt="Front door replacement."
+                                    loading="lazy"
+                                    width="800"
+                                    height="600"
+                                />
+                            </div>
+                            <figcaption>Front Door Replacement — Effort, PA</figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" role="group" aria-roledescription="slide">
+                            <div class="gallery-img-wrap">
+                                <img
+                                    src="images/showcase/showcase_15.webp"
+                                    alt="Bathroom addition."
+                                    loading="lazy"
+                                    width="800"
+                                    height="600"
+                                />
+                            </div>
+                            <figcaption>Basement Bathroom Addition</figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" role="group" aria-roledescription="slide">
+                            <div class="gallery-img-wrap">
+                                <img
+                                    src="images/showcase/showcase_9.webp"
+                                    alt="Full room remodel with new lighting."
+                                    loading="lazy"
+                                    width="800"
+                                    height="600"
+                                />
+                            </div>
+                            <figcaption>Room Remodel</figcaption>
+                        </figure>
+                    </div>
+
+                    <button class="gallery-btn gallery-btn--prev" id="galleryPrev" aria-label="Previous project">
+                        <svg
+                            viewBox="0 0 24 24"
+                            width="20"
+                            height="20"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            aria-hidden="true"
+                        >
+                            <polyline points="15 18 9 12 15 6" />
+                        </svg>
+                    </button>
+                    <button class="gallery-btn gallery-btn--next" id="galleryNext" aria-label="Next project">
+                        <svg
+                            viewBox="0 0 24 24"
+                            width="20"
+                            height="20"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            aria-hidden="true"
+                        >
+                            <polyline points="9 18 15 12 9 6" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="gallery-controls">
+                    <div class="gallery-dots" id="galleryDots"></div>
+                    <button
+                        class="gallery-pause"
+                        id="galleryPause"
+                        aria-pressed="false"
+                        aria-label="Pause gallery auto-scroll"
+                    >
+                        <svg
+                            class="icon-pause"
+                            viewBox="0 0 24 24"
+                            width="14"
+                            height="14"
+                            fill="currentColor"
+                            aria-hidden="true"
+                        >
+                            <rect x="6" y="4" width="4" height="16" rx="1" />
+                            <rect x="14" y="4" width="4" height="16" rx="1" />
+                        </svg>
+                        <svg
+                            class="icon-play"
+                            viewBox="0 0 24 24"
+                            width="14"
+                            height="14"
+                            fill="currentColor"
+                            aria-hidden="true"
+                        >
+                            <polygon points="7 4 20 12 7 20 7 4" />
+                        </svg>
+                    </button>
+                </div>
+            </section>
+
+            <!-- TESTIMONIALS -->
+            <section class="testimonials" id="testimonials" aria-labelledby="testimonialsHeading">
+                <div class="container">
+                    <div class="section-header" data-reveal>
+                        <span class="section-label">What Clients Say</span>
+                        <h2 id="testimonialsHeading">Trusted by Homeowners</h2>
+                    </div>
+                    <div class="testimonials-grid">
+                        <blockquote class="testimonial-card" data-reveal>
+                            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                            <p>
+                                "They gutted and rebuilt our entire master bathroom in under two weeks. The tile work is
+                                flawless, everything is clean and square, and they left the house spotless every day.
+                                We've already booked them for the hall bath."
+                            </p>
+                            <footer>
+                                <strong>Joe H.</strong>
+                                <span>Master Bathroom Remodel</span>
+                            </footer>
+                        </blockquote>
+
+                        <blockquote class="testimonial-card" data-reveal>
+                            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                            <p>
+                                "Our kitchen remodel was a big deal for us. They showed up on time every single day,
+                                communicated every decision, and the finished result is better than we imagined. Worth
+                                every penny."
+                            </p>
+                            <footer>
+                                <strong>Kendra Q.</strong>
+                                <span>Full Kitchen Renovation</span>
+                            </footer>
+                        </blockquote>
+
+                        <blockquote class="testimonial-card" data-reveal>
+                            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                            <p>
+                                "New LVP floors throughout the whole first floor — they moved furniture, pulled the old
+                                carpet, and had everything done in three days. The trim work is perfect. Best money I've
+                                spent on this house."
+                            </p>
+                            <footer>
+                                <strong>Andy C.</strong>
+                                <span>Flooring &amp; Trim</span>
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA STRIP -->
+            <section class="cta-strip" aria-labelledby="ctaHeading">
+                <div class="container cta-inner">
+                    <div class="cta-copy" data-reveal>
+                        <h2 id="ctaHeading">Ready to get started?</h2>
+                        <p>Free estimates, no pressure. We'll come take a look and give you an honest price.</p>
+                    </div>
+                    <div class="cta-actions" data-reveal>
+                        <!-- <a href="#contact" class="btn btn-white">Get a Free Quote</a> -->
+                        <a href="tel:{{phoneE164}}" class="btn btn-white">
+                            <svg
+                                viewBox="0 0 24 24"
+                                width="15"
+                                height="15"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.5"
+                                stroke-linecap="round"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .9h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
+                                />
+                            </svg>
+                            {{phoneDisplay}}
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            {{!-- {{> contact}} --}}
+        </main>
+
+        {{> footer}}
+
+        <script type="module" src="/src/js/main.js"></script>
+    </body>
+</html>
